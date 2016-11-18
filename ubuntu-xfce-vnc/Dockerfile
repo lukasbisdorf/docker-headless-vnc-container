@@ -23,7 +23,7 @@ RUN echo "deb http://packages.linuxmint.com/ rafaela main upstream import" >> /e
     && echo "deb http://extra.linuxmint.com/ rafaela main " >> /etc/apt/sources.list.d/mint.list
 
 ############### xvnc / xfce installation
-RUN apt-get update && apt-get upgrade -y && apt-get install -y supervisor vim xfce4 vnc4server wget && rm -rf /var/lib/apt/
+RUN apt-get update && apt-get upgrade -y && apt-get install -y supervisor vim xfce4 vnc4server virt-manager wget && rm -rf /var/lib/apt/
 ### Install noVNC - HTML5 based VNC viewer
 RUN mkdir -p $NO_VNC_HOME/utils/websockify \
     && wget -qO- https://github.com/ConSol/noVNC/archive/consol_1.0.0.tar.gz | tar xz --strip 1 -C $NO_VNC_HOME \
